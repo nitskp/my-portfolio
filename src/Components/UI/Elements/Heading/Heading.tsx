@@ -1,14 +1,15 @@
 import styled, { css } from "styled-components";
+import { basicProps, basicStyles } from "../../../BasicProps";
 
-interface Props {
+interface Props extends basicProps {
   children: string | React.ReactNode;
-  fontSize?:  string;
+  fontSize?: string;
   color?: string;
   fontWeight?: number | string;
   type: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
-interface HeadingProps {
+interface HeadingProps extends basicProps {
   fontSize?: string;
   color?: string;
   fontWeight?: number | string;
@@ -20,6 +21,9 @@ const H1 = styled.h1<HeadingProps>`
     color: ${color || "black"};
     font-weight: ${fontWeight || 900};
   `}
+  ${(props) => css`
+    ${basicStyles}
+  `}
 `;
 
 const H2 = styled.h2<HeadingProps>`
@@ -27,6 +31,9 @@ const H2 = styled.h2<HeadingProps>`
     font-size: ${fontSize || 32};
     color: ${color || "black"};
     font-weight: ${fontWeight || 700};
+  `}
+  ${(props) => css`
+    ${basicStyles}
   `}
 `;
 
@@ -36,6 +43,9 @@ const H3 = styled.h3<HeadingProps>`
     color: ${color || "gray"};
     font-weight: ${fontWeight || 500};
   `}
+  ${(props) => css`
+    ${basicStyles}
+  `}
 `;
 
 const H4 = styled.h4<HeadingProps>`
@@ -43,6 +53,9 @@ const H4 = styled.h4<HeadingProps>`
     font-size: ${fontSize || 20};
     color: ${color || "gray"};
     font-weight: ${fontWeight || 500};
+  `}
+  ${(props) => css`
+    ${basicStyles}
   `}
 `;
 
@@ -52,6 +65,9 @@ const H5 = styled.h5<HeadingProps>`
     color: ${color || "black"};
     font-weight: ${fontWeight || 400};
   `}
+  ${(props) => css`
+    ${basicStyles}
+  `}
 `;
 
 const H6 = styled.h6<HeadingProps>`
@@ -60,33 +76,67 @@ const H6 = styled.h6<HeadingProps>`
     color: ${color || "black"};
     font-weight: ${fontWeight || 400};
   `}
+  ${(props) => css`
+    ${basicStyles}
+  `}
 `;
 
-const Heading = ({ fontSize, fontWeight, color, type, children }: Props) => {
+const Heading = (props: Props) => {
+  const { fontSize, fontWeight, color, type, children } = props;
   return (
     <>
       {type === "h1" ? (
-        <H1 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H1
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H1>
       ) : type === "h2" ? (
-        <H2 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H2
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H2>
       ) : type === "h3" ? (
-        <H3 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H3
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H3>
       ) : type === "h4" ? (
-        <H4 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H4
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H4>
       ) : type === "h5" ? (
-        <H5 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H5
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H5>
       ) : (
-        <H6 fontSize={fontSize} fontWeight={fontWeight} color={color}>
+        <H6
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          color={color}
+          {...props}
+        >
           {children}
         </H6>
       )}

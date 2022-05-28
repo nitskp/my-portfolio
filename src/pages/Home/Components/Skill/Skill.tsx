@@ -1,4 +1,3 @@
-import { Box, Heading } from "../../../../Components";
 
 interface Props {
   icon: React.ReactNode;

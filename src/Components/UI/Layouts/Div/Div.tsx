@@ -6,7 +6,7 @@ import {
   flexStyles,
 } from "../../../BasicProps";
 
-interface Props extends basicProps {}
+interface Props extends basicProps, flexProps {}
 
 interface StyleProps extends basicProps, flexProps {}
 

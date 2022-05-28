@@ -1,16 +1,15 @@
-import { Heading } from "../../Components";
+import { Wrapper } from "../../Components";
 import GlobalStyle from "../../GlobalStyles";
-import { Skill } from "./Components";
-import { AiFillAlert } from "react-icons/ai";
+import { Hero } from "./Components";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Heading type="h1" color="green" fontSize={"100px"} fontWeight={300}>
-        Hello World
-      </Heading>
-      <Skill icon={<AiFillAlert fontSize={40}/>} name={"Test"} />
+      <Wrapper>
+        <Hero />
+        {/* <Skill icon={<AiFillAlert fontSize={40} />} name={"Test"} /> */}
+      </Wrapper>
     </>
   );
 }
