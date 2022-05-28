@@ -7,6 +7,7 @@ interface Props {
   primary?: boolean;
   secondary?: boolean;
   title: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 interface StyledProps {
@@ -19,6 +20,8 @@ const StyledButton = styled.button<StyledProps>`
   border-radius: 8px;
   border: 2px solid #5487f0;
   font-size: 12px;
+  background-color: #5a87f0;
+  color: white;
   ${({ primary, secondary }) =>
     primary
       ? css`
@@ -32,9 +35,9 @@ const StyledButton = styled.button<StyledProps>`
         `}
 `;
 
-const Button = ({ primary, secondary, title }: Props) => {
+const Button = ({ primary, secondary, title, onClick }: Props) => {
   return (
-    <StyledButton primary={primary} secondary={secondary}>
+    <StyledButton primary={primary} secondary={secondary} onClick={onClick}>
       {title}
     </StyledButton>
   );
