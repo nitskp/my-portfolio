@@ -13,7 +13,7 @@ const DiamondDiv = styled(Div)`
   right: 0;
   bottom: 0;
   transform: rotate(45deg);
-  border: #dde1e3 solid 1px;
+  border: #dde1e3 solid 2px;
   border-radius: 8px;
 `;
 
@@ -29,8 +29,10 @@ const Skill = ({ icon, name }: Props) => {
           justifyContent="center"
           alignItems="center"
         >
-          {icon}
           <DiamondDiv />
+          <Div>{icon}</Div>
+
+          
         </Div>
 
         <Heading type="h3" color="#3d4449">

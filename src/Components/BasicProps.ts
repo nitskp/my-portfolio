@@ -98,8 +98,9 @@ export const basicStyles = css<basicProps>`
 
 export const flexStyles = css<flexProps>`
   ${(props) => props.flex && "display: flex;"}
-  ${(props) => props.flexDirection && "flex-direction: " + props.flexDirection}
   ${(props) =>
-    props.justifyContent && "justify-content: " + props.justifyContent}
-  ${(props) => props.alignItems && "align-items: " + props.alignItems}
+    props.flexDirection && "flex-direction: " + props.flexDirection + ";"}
+  ${(props) =>
+    props.justifyContent && "justify-content: " + props.justifyContent + ";"}
+  ${(props) => props.alignItems && "align-items: " + props.alignItems + ";"}
 `;

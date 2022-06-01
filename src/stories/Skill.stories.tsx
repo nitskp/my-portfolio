@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof Skill> = (args) => <Skill {...args} />;
 export const HtmlandCss = Template.bind({});
 HtmlandCss.args = {
   name: "Html and Css",
-  icon: <AiFillHtml5 />,
+  icon: <AiFillHtml5 fontSize={40}/>,
 };

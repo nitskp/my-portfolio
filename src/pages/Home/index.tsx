@@ -3,6 +3,9 @@ import GlobalStyle from "../../GlobalStyles";
 import { Hero, Skill } from "./Components";
 import { BlueUnderlineDiv } from "./Components/Styled";
 import { GrDiamond } from "react-icons/gr";
+import { DiJavascript1 } from "react-icons/di";
+import { SiTypescript } from "react-icons/si";
+import {FaReact} from "react-icons/fa"
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
               Skills
             </Heading>
           </BlueUnderlineDiv>
-          <Skill icon={<GrDiamond fontSize={34}/>} name={"Html and Css"} />
+          <Skill icon={<GrDiamond fontSize={34} />} name={"Html and Css"} />
+          <Skill icon={<DiJavascript1 fontSize={34} />} name="Javascript" />
+          <Skill icon={<SiTypescript fontSize={34} />} name={"Typescript"} />
+          <Skill icon={<FaReact fontSize={34}/>} name="React"/>
         </Div>
       </Wrapper>
     </>
