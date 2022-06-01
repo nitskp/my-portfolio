@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import { Button, Div, Heading } from "../../../../Components";
 import profilePic from "../../../../Assets/images/profilePic.jpeg";
+import { BlueUnderlineDiv } from "../Styled";
 
-const BlueUnderlineDiv = styled(Div)`
-  border-bottom: 6px solid blue;
-  padding: 10px 0px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-`;
+// const BlueUnderlineDiv = styled(Div)`
+//   border-bottom: 6px solid blue;
+//   padding: 10px 0px;
+//   margin: 0 auto;
+//   margin-bottom: 20px;
+// `;
 
 const Hero = () => {
   return (
     <Div>
-      <BlueUnderlineDiv flex>
+      <BlueUnderlineDiv small>
         <Heading
           type="h1"
           fontSize={"17px"}

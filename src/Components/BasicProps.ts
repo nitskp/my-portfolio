@@ -21,6 +21,19 @@ export interface basicProps {
   maxHeight?: string | number;
   minWidth?: string | number;
   minHeight?: string | number;
+
+  border?: string;
+  borderBottom?: string;
+  borderTop?: string;
+  borderLeft?: string;
+  borderRight?: string;
+  borderRadius?: string | number;
+
+  position?: string;
+  top?: string | number;
+  left?: string | number;
+  right?: string | number;
+  bottom?: string | number;
 }
 
 export interface flexProps {
@@ -63,6 +76,24 @@ export const basicStyles = css<basicProps>`
   ${(props) => props.minHeight && "min-height: " + props.minHeight + ";"}
   ${(props) => props.maxHeight && "max-height: " + props.maxHeight + ";"}
   ${(props) => props.minWidth && "min-width: " + props.minWidth + ";"}
+
+  // border
+  ${(props) => props.border && "border: " + props.border + ";"}
+  ${(props) => props.borderRight && "border-right: " + props.borderRight + ";"}
+  ${(props) => props.borderLeft && "border-left: " + props.borderLeft + ";"}
+  ${(props) => props.borderTop && "border-top: " + props.borderTop + ";"}
+  ${(props) =>
+    props.borderBottom && "border-bottom: " + props.borderBottom + ";"}
+  ${(props) =>
+    props.borderRadius && "border-radius: " + props.borderRadius + ";"}
+
+  // postion
+
+  ${(props) => props.position && "position: " + props.position + ";"}
+  ${(props) => props.top && "top: " + props.top + ";"}
+  ${(props) => props.left && "left: " + props.left + ";"}
+  ${(props) => props.right && "right: " + props.right + ";"}
+  ${(props) => props.bottom && "bottom: " + props.bottom + ";"}
 `;
 
 export const flexStyles = css<flexProps>`
