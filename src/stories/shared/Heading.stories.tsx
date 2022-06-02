@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Heading } from "../Components";
+import { Heading } from "../../Components";
 
 export default {
   title: "shared/Heading",

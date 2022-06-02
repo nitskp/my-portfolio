@@ -15,6 +15,8 @@ export interface basicProps {
 
   style?: React.CSSProperties;
   className?: string;
+  id?:string;
+  
   width?: string | number;
   height?: string | number;
   maxWidth?: string | number;
@@ -34,6 +36,8 @@ export interface basicProps {
   left?: string | number;
   right?: string | number;
   bottom?: string | number;
+
+  fontFamily?: string | number;
 }
 
 export interface flexProps {
@@ -88,12 +92,14 @@ export const basicStyles = css<basicProps>`
     props.borderRadius && "border-radius: " + props.borderRadius + ";"}
 
   // postion
-
   ${(props) => props.position && "position: " + props.position + ";"}
   ${(props) => props.top && "top: " + props.top + ";"}
   ${(props) => props.left && "left: " + props.left + ";"}
   ${(props) => props.right && "right: " + props.right + ";"}
   ${(props) => props.bottom && "bottom: " + props.bottom + ";"}
+
+  // font
+  ${(props) => props.fontFamily && "font-family: " + props.fontFamily + ";"}
 `;
 
 export const flexStyles = css<flexProps>`

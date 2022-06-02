@@ -6,6 +6,7 @@ import styled, { css } from "styled-components";
 interface Props {
   primary?: boolean;
   secondary?: boolean;
+  green?: boolean;
   title: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -13,6 +14,7 @@ interface Props {
 interface StyledProps {
   primary?: boolean;
   secondary?: boolean;
+  green?: boolean;
 }
 
 const StyledButton = styled.button<StyledProps>`
@@ -22,16 +24,23 @@ const StyledButton = styled.button<StyledProps>`
   font-size: 12px;
   background-color: #5a87f0;
   color: white;
-  ${({ primary, secondary }) =>
+  ${({ primary, secondary, green }) =>
     primary
       ? css`
           background-color: #5a87f0;
           color: white;
         `
-      : secondary &&
-        css`
+      : secondary
+      ? css`
           background-color: white;
           color: #5487f0;
+        `
+      : green &&
+        css`
+          background-color: #0fbf61;
+          color: black;
+          border-radius: 25%;
+          
         `}
 `;
 

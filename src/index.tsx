@@ -3,13 +3,20 @@ import ReactDOM from "react-dom/client";
 
 import App from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Portfolio2 from "./pages/Portfolio-2";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<App />} />
+        <Route path={"/portfolio-2"} element={<Portfolio2 />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
