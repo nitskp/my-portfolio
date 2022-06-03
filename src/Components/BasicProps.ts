@@ -40,6 +40,7 @@ export interface basicProps {
   fontFamily?: string | number;
   fontSize?: string | number;
   textColor?: string | number;
+  fontWeight?: string | number;
 }
 
 export interface flexProps {
@@ -103,6 +104,7 @@ export const basicStyles = css<basicProps>`
   // font
   ${(props) => props.fontFamily && "font-family: " + props.fontFamily + ";"}
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+  ${(props) => props.fontWeight && `font-weight: ${props.fontWeight};`}
 
   // color
   ${(props) => props.textColor && `color: ${props.textColor};`}

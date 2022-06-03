@@ -48,10 +48,10 @@ const List = styled.ul`
 
 const About = () => {
   const description =
-    "Hello! My name is Nitin Kumar Pandey and I am web developer." +
-    "I enjoy creating things that live on internet." +
-    "An entuastic Software Engineer eager to learn, I specialize in Front-end Development." +
-    "I have been working for 1 year and loving every minute of it.";
+    "Hello! My name is Nitin Kumar Pandey and I am web developer. " +
+    "I enjoy creating things that live on internet. " +
+    "An enthuastic Software Engineer eager to learn, I specialize in Front-end Development. " +
+    "I have been working for 1 year and loving every minute of it. ";
   return (
     <Wrapper id="about">
       <Div
@@ -66,7 +66,7 @@ const About = () => {
           <Image src={profilePic} alt="Me" />
         </ImageContainer>
         {/* Description  */}
-        <Div maxWidth={`560px`}>
+        <Div maxWidth={`560px`} role="article">
           <Heading
             type="h1"
             textColor={"#0FBF61"}

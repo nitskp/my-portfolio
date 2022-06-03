@@ -1,6 +1,6 @@
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "../../GlobalStyles";
-import { About, Hero } from "./Components";
+import { About, Hero, Service } from "./Components";
 
 const theme: DefaultTheme = {
   colors: {
@@ -20,6 +20,7 @@ const Portfolio = () => {
       <ThemeProvider theme={theme}>
         <Hero />
         <About />
+        <Service />
       </ThemeProvider>
     </>
   );

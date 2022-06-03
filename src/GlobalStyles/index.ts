@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Roboto Slab', serif;
+        font-size: 18px;
+        line-height: 30px;
     }
 `;
 
