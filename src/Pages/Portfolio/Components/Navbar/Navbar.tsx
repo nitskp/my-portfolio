@@ -17,11 +17,11 @@ const NavLink = styled(HashLink)`
   text-decoration: none;
   font-size: 18px;
   :visited {
-    color: #494949;
+    color: #0fbf61;
   }
   :active,
   :hover {
-    color: #0fbf61;
+    color: #494949;
   }
 `;
 
@@ -46,14 +46,11 @@ const Navbar = () => {
         <Heading type="h1">NP</Heading>
       </Div>
       <NavLinks>
-        <NavLink to={"#Home"}>Home</NavLink>
-        <NavLink to={"#About"}>About</NavLink>
-        <NavLink to={"#Work"}>Work</NavLink>
-        <Button
-          primary
-          title="Resume"
-          fontSize={`18px`}
-        />
+        <NavLink to={"#home"}>Home</NavLink>
+        <NavLink to={"#about"}>About</NavLink>
+        <NavLink to={"#service"}>Service</NavLink>
+        <NavLink to={"#work"}>Work</NavLink>
+        <Button primary title="Resume" fontSize={`18px`} />
       </NavLinks>
     </Div>
   );

@@ -31,7 +31,7 @@ const Hero = () => {
   const breifDescription =
     "I am a Full-Stack web developer based in Delhi, India. I love coding, building websites and creating new applications.";
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       {/* Header  */}
       <Header width={`100vw`} flex justifyContent="center">
         {/* Navbar  */}
