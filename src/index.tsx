@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import App from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Portfolio2 from "./pages/Portfolio-2";
+import Portfolio from "./Pages/Portfolio";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,8 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path={"/"} element={<App />} />
-        <Route path={"/portfolio-2"} element={<Portfolio2 />} />
+        <Route path={"/"} element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

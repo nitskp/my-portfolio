@@ -15,8 +15,8 @@ export interface basicProps {
 
   style?: React.CSSProperties;
   className?: string;
-  id?:string;
-  
+  id?: string;
+
   width?: string | number;
   height?: string | number;
   maxWidth?: string | number;
@@ -38,6 +38,8 @@ export interface basicProps {
   bottom?: string | number;
 
   fontFamily?: string | number;
+  fontSize?: string | number;
+  textColor?: string | number;
 }
 
 export interface flexProps {
@@ -100,6 +102,10 @@ export const basicStyles = css<basicProps>`
 
   // font
   ${(props) => props.fontFamily && "font-family: " + props.fontFamily + ";"}
+  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+
+  // color
+  ${(props) => props.textColor && `color: ${props.textColor};`}
 `;
 
 export const flexStyles = css<flexProps>`

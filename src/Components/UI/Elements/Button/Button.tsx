@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
+import { basicProps, basicStyles } from "../../../BasicProps";
 
 // colors
 // primary : #5A87F0
 
-interface Props {
+interface Props extends basicProps {
   primary?: boolean;
   secondary?: boolean;
   green?: boolean;
@@ -11,42 +12,30 @@ interface Props {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-interface StyledProps {
-  primary?: boolean;
-  secondary?: boolean;
-  green?: boolean;
-}
-
-const StyledButton = styled.button<StyledProps>`
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 2px solid #5487f0;
-  font-size: 12px;
-  background-color: #5a87f0;
-  color: white;
-  ${({ primary, secondary, green }) =>
-    primary
-      ? css`
-          background-color: #5a87f0;
-          color: white;
-        `
-      : secondary
-      ? css`
-          background-color: white;
-          color: #5487f0;
-        `
-      : green &&
-        css`
-          background-color: #0fbf61;
-          color: black;
-          border-radius: 25%;
-          
-        `}
+const StyledButton = styled.button<Partial<Props>>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px;
+  border: none;
+  gap: 10px;
+  border-radius: 50px;
+  font-size: 18px;
+  ${(props) => props.primary && `background: #0FBF61;`}
+  ${(props) => css`
+    ${basicStyles}
+  `}
 `;
 
-const Button = ({ primary, secondary, title, onClick }: Props) => {
+const Button = (props: Props) => {
+  const { primary, secondary, title, onClick } = props;
   return (
-    <StyledButton primary={primary} secondary={secondary} onClick={onClick}>
+    <StyledButton
+      primary={primary}
+      secondary={secondary}
+      onClick={onClick}
+      {...props}
+    >
       {title}
     </StyledButton>
   );
