@@ -16,8 +16,11 @@ const IconContainer = styled(Div)<Partial<Props>>`
   width: 120px;
   height: 120px;
   border-radius: 20px;
+  img {
+    width: 60%;
+    height: 60%;
+  }
 `;
-// first - rgba(15, 191, 97, 0.2);
 
 const ServiceCard = ({ icon, text, cardNumber, iconBackground }: Props) => {
   return (

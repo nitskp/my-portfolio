@@ -22,6 +22,12 @@ const StyledButton = styled.button<Partial<Props>>`
   border-radius: 50px;
   font-size: 18px;
   ${(props) => props.primary && `background: #0FBF61;`}
+  ${(props) =>
+    props.secondary &&
+    css`
+      background: #ffffff;
+      color: #0fbf61;
+    `}
   ${(props) => css`
     ${basicStyles}
   `}
