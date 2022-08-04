@@ -1,5 +1,5 @@
 import { Div, Heading, Wrapper, Text } from "../../../../Components";
-import profilePic from "../../../../Assets/images/profilePic.jpg";
+import profilePic from "../../../../Assets/images/profilePhoto.jpeg";
 import styled from "styled-components";
 
 const Image = styled.img`
